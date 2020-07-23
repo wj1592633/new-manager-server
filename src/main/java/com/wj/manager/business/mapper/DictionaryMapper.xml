@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wj.manager.business.mapper.DictionaryMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wj.manager.business.entity.Dictionary">
+        <id column="dict_id" property="dictId" />
+        <result column="code" property="code" />
+        <result column="name" property="name" />
+        <result column="is_parent" property="isParent" />
+        <result column="pid" property="pid" />
+        <result column="sort" property="sort" />
+        <result column="status" property="status" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        dict_id, code, name, is_parent, pid, sort, status
+    </sql>
+
+</mapper>

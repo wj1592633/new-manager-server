@@ -1,0 +1,9 @@
+UsernamePasswordAuthenticationFilter.attemptAuthentication() //congfig.formLogin()只有设置了才会有这个拦截器
+FilterSecurityInterceptor.invoke()
+ExceptionTranslationFilter.doFilter()
+如果没登陆状态下访问资源，会执行到FilterSecurityInterceptor，该拦截器发现要登陆，则抛异常。ExceptionTranslationFilter捕获异常
+跳转到登陆页面，登陆页面登陆时携带username会被UsernamePasswordAuthenticationFilter检测到并进行拦截校验。
+
+ 插件 codota,maven helper
+
+ 1、前端登陆表单提交时，必须在用户输入的账号或者手机号码后面拼接type=phone或者type=username

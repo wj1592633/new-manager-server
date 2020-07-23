@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<form class="form-signin" method="post" action="/login/phone">
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <p>
+        <label for="phone" class="sr-only">phone</label>
+        <input type="text" id="phone" name="phone" class="form-control" placeholder="phone" required="" autofocus="">
+    </p>
+    <p>
+        <label for="verCode" class="sr-only">verCode</label>
+        <input type="text" id="verCode" name="verCode" class="form-control" placeholder="verCode" >
+        <a href="#" id="sendCode">发送验证码</a>
+    </p>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <a href="https://github.com/login/oauth/authorize?client_id=bf4b55764c68e9eee987&redirect_uri=http://localhost:8080/authorization_code&state=state">github登陆</a>
+</form>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+        $("#sendCode").click(function(){
+            $.ajax({
+                //请求方式
+                type : "GET",
+                contentType: "application/json;charset=UTF-8",
+                //请求的媒体类型
+                //JSON.stringify(list),
+                data:{"phone":"123456"},
+                dataType:"json",
+                //请求地址
+                url : "/code/sms",
+                //请求成功
+                success : function(result) {
+                    console.log(result);
+                },
+                //请求失败，包含具体的错误信息
+                error : function(e){
+                    console.log(e.status);
+                    console.log(e.responseText);
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

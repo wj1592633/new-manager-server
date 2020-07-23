@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "base.security",
+      "type": "com.wj.manager.properties.SecurityProperties",
+      "sourceType": "com.wj.manager.properties.SecurityProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "base.security.browser",
+      "type": "com.wj.manager.properties.BrowserProperties",
+      "sourceType": "com.wj.manager.properties.SecurityProperties"
+    },
+    {
+      "name": "base.security.code",
+      "type": "com.wj.manager.properties.ValidateCodeProperties",
+      "sourceType": "com.wj.manager.properties.SecurityProperties"
+    },
+    {
+      "name": "base.security.login",
+      "type": "com.wj.manager.properties.LoginProperties",
+      "sourceType": "com.wj.manager.properties.SecurityProperties"
+    }
+  ],
+  "hints": []
+}

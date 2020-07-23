@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--
+<form method="post" action="/login">
+    <input type="text" name="username"><br>
+    <input type="password" name="password" ><br>
+    <input type="submit">
+    <button type="submit"> denglu</button>
+</form>
+-->
+
+
+<form class="form-signin" method="post" action="/login">
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <p>
+        <label for="username" class="sr-only">Username</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+    </p>
+    <p>
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+    </p>
+    <div>
+        <p>
+            <label for="verCode" class="sr-only">verCode</label>
+            <input type="text" id="verCode" name="verCode" class="form-control" placeholder="verCode" required="">
+        </p>
+        <img src="/code/image" width="130px" height="48px" />
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <a href="https://github.com/login/oauth/authorize?client_id=bf4b55764c68e9eee987&redirect_uri=http://localhost:8080/authorization_code&state=state">github登陆</a>
+</form>
+<a href="https://github.com/login/oauth/authorize?client_id=bf4b55764c68e9eee987&redirect_uri=http://localhost:8080/authorization_code&state=state">github登陆</a>
+</body>
+</html>
